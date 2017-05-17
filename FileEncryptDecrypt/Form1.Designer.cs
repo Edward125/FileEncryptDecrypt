@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
+            this.chkFolder = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,6 +69,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.chkFolder);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtPassword);
@@ -103,9 +105,19 @@
             this.txtPassword.Location = new System.Drawing.Point(72, 67);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(311, 22);
+            this.txtPassword.Size = new System.Drawing.Size(224, 22);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // chkFolder
+            // 
+            this.chkFolder.AutoSize = true;
+            this.chkFolder.Location = new System.Drawing.Point(302, 69);
+            this.chkFolder.Name = "chkFolder";
+            this.chkFolder.Size = new System.Drawing.Size(91, 18);
+            this.chkFolder.TabIndex = 6;
+            this.chkFolder.Text = "批量加/解密";
+            this.chkFolder.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -134,6 +146,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.CheckBox chkFolder;
     }
 }
 

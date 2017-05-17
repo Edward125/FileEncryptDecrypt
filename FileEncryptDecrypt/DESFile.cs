@@ -184,6 +184,7 @@ namespace FileEncryptDecrypt
                     if (FC_TAG != tag)
                         throw new CryptoHelpException("文件被破坏");
 
+
                     long numReads = lSize / BUFFER_SIZE;
 
                     long slack = (long)lSize % BUFFER_SIZE;
@@ -218,11 +219,12 @@ namespace FileEncryptDecrypt
                     byte[] oldHash = new byte[hasher.HashSize / 8];
                     read = cin.Read(oldHash, 0, oldHash.Length);
                     if ((oldHash.Length != read) || (!CheckByteArrays(oldHash, curHash)))
-                        throw new CryptoHelpException("文件被破坏");
+                         throw new CryptoHelpException("文件被破坏");
                 }
 
-                if (outValue != lSize)
+                if (outValue != lSize)    
                     throw new CryptoHelpException("文件大小不匹配");
+ 
             }
         }
     }

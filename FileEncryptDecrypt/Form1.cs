@@ -37,12 +37,13 @@ namespace FileEncryptDecrypt
                 return;
 
             string inFile = txtFile.Text;
-            string outFile = inFile + ".dat";
+            string outFile = inFile + ".edward";
             string password = txtPassword.Text;
             DESFile.EncryptFile(inFile, outFile, password);//加密文件
             //删除加密前的文件
             File.Delete(inFile);
             txtFile.Text = string.Empty;
+            txtPassword.Text = string.Empty;
             MessageBox.Show("加密成功");
         }
 
@@ -54,12 +55,24 @@ namespace FileEncryptDecrypt
                 return;
 
             string inFile = txtFile.Text;
-            string outFile = inFile.Substring(0, inFile.Length - 4);
+            string outFile = inFile.Substring(0, inFile.LastIndexOf('.') + 1);
             string password = txtPassword.Text;
+            if (File.Exists (outFile ))
+                try
+                {
+                    File.Delete(outFile);
+                }
+                catch (Exception)
+                {
+                    
+                
+                }
+
             DESFile.DecryptFile(inFile, outFile, password);//解密文件
             //删除解密前的文件
             File.Delete(inFile);
             txtFile.Text = string.Empty;
+            txtPassword.Text = string.Empty;
             MessageBox.Show("解密成功");
         }
     }
