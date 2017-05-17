@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Edward;
 
 namespace FileEncryptDecrypt
 {
@@ -24,9 +25,19 @@ namespace FileEncryptDecrypt
 
         private void txtFile_DoubleClick(object sender, EventArgs e)
         {
-            OpenFileDialog openfile = new OpenFileDialog();
-            if (openfile.ShowDialog() == DialogResult.OK)
-                txtFile.Text = openfile.FileName;
+            if (chkFolder.Checked)
+            {
+                FolderBrowserDialog fd = new FolderBrowserDialog();
+                if (fd.ShowDialog() == DialogResult.OK)
+                    txtFile.Text = fd.SelectedPath;
+            }
+            else
+            {
+                OpenFileDialog openfile = new OpenFileDialog();
+                if (openfile.ShowDialog() == DialogResult.OK)
+                    txtFile.Text = openfile.FileName;
+            }
+            
         }
 
         private void btnEncrypt_Click(object sender, EventArgs e)
@@ -36,12 +47,23 @@ namespace FileEncryptDecrypt
             if (string.IsNullOrEmpty(txtPassword.Text.Trim()))
                 return;
 
-            string inFile = txtFile.Text;
-            string outFile = inFile + ".edward";
-            string password = txtPassword.Text;
-            DESFile.EncryptFile(inFile, outFile, password);//加密文件
-            //删除加密前的文件
-            File.Delete(inFile);
+            if (chkFolder.Checked)
+            {
+
+            }
+            else
+            {
+                string inFile = txtFile.Text;
+                string outFile = inFile + ".edward";
+                string password = txtPassword.Text;
+                DESFile.EncryptFile(inFile, outFile, password);//加密文件
+                //删除加密前的文件
+                File.Delete(inFile);
+
+            }
+            
+
+
             txtFile.Text = string.Empty;
             txtPassword.Text = string.Empty;
             MessageBox.Show("加密成功");
@@ -54,23 +76,34 @@ namespace FileEncryptDecrypt
             if (string.IsNullOrEmpty(txtPassword.Text.Trim()))
                 return;
 
-            string inFile = txtFile.Text;
-            string outFile = inFile.Substring(0, inFile.LastIndexOf('.') + 1);
-            string password = txtPassword.Text;
-            if (File.Exists (outFile ))
-                try
-                {
-                    File.Delete(outFile);
-                }
-                catch (Exception)
-                {
-                    
-                
-                }
 
-            DESFile.DecryptFile(inFile, outFile, password);//解密文件
-            //删除解密前的文件
-            File.Delete(inFile);
+            if (chkFolder.Checked)
+            {
+
+            }
+            else
+            {
+                string inFile = txtFile.Text;
+                string outFile = inFile.Substring(0, inFile.LastIndexOf('.') + 1);
+                string password = txtPassword.Text;
+                if (File.Exists(outFile))
+                    try
+                    {
+                        File.Delete(outFile);
+                    }
+                    catch (Exception)
+                    {
+
+
+                    }
+                DESFile.DecryptFile(inFile, outFile, password);//解密文件
+                //删除解密前的文件
+                File.Delete(inFile);
+            }
+            
+
+
+
             txtFile.Text = string.Empty;
             txtPassword.Text = string.Empty;
             MessageBox.Show("解密成功");
