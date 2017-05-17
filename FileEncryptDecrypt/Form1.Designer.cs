@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.txtFile = new System.Windows.Forms.TextBox();
             this.btnEncrypt = new System.Windows.Forms.Button();
             this.btnDecrypt = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkFolder = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.chkFolder = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,6 +83,16 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
+            // chkFolder
+            // 
+            this.chkFolder.AutoSize = true;
+            this.chkFolder.Location = new System.Drawing.Point(302, 69);
+            this.chkFolder.Name = "chkFolder";
+            this.chkFolder.Size = new System.Drawing.Size(91, 18);
+            this.chkFolder.TabIndex = 6;
+            this.chkFolder.Text = "批量加/解密";
+            this.chkFolder.UseVisualStyleBackColor = true;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -109,16 +120,6 @@
             this.txtPassword.TabIndex = 3;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // chkFolder
-            // 
-            this.chkFolder.AutoSize = true;
-            this.chkFolder.Location = new System.Drawing.Point(302, 69);
-            this.chkFolder.Name = "chkFolder";
-            this.chkFolder.Size = new System.Drawing.Size(91, 18);
-            this.chkFolder.TabIndex = 6;
-            this.chkFolder.Text = "批量加/解密";
-            this.chkFolder.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -127,6 +128,7 @@
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";

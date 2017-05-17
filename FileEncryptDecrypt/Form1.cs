@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Edward;
@@ -61,7 +60,6 @@ namespace FileEncryptDecrypt
                 DialogResult dr = MessageBox.Show("Are u sure to encrypt the folder all files?", "Quesstion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dr == DialogResult.No)
                     return;
-
                 DirectoryInfo di = new DirectoryInfo(txtFile.Text.Trim());
                 foreach (FileInfo fi in di.GetFiles())
                 {

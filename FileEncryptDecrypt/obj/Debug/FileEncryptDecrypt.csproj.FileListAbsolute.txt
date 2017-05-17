@@ -12,3 +12,4 @@ Z:\Users\Edward\EdwardCode\FileEncryptDecrypt\FileEncryptDecrypt\bin\Debug\FileE
 Z:\Users\Edward\EdwardCode\FileEncryptDecrypt\FileEncryptDecrypt\obj\Debug\FileEncryptDecrypt.Form1.resources
 Z:\Users\Edward\EdwardCode\FileEncryptDecrypt\FileEncryptDecrypt\obj\Debug\FileEncryptDecrypt.Properties.Resources.resources
 Z:\Users\Edward\EdwardCode\FileEncryptDecrypt\FileEncryptDecrypt\obj\Debug\FileEncryptDecrypt.csproj.GenerateResource.Cache
+Z:\Users\Edward\EdwardCode\FileEncryptDecrypt\FileEncryptDecrypt\bin\Debug\FileEncryptDecrypt.exe.config
