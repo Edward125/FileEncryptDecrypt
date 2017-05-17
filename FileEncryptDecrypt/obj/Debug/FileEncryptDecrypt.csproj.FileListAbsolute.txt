@@ -5,3 +5,10 @@ D:\Edward\FileEncryptDecrypt\FileEncryptDecrypt\obj\Debug\FileEncryptDecrypt.Pro
 D:\Edward\FileEncryptDecrypt\FileEncryptDecrypt\obj\Debug\FileEncryptDecrypt.csproj.GenerateResource.Cache
 D:\Edward\FileEncryptDecrypt\FileEncryptDecrypt\obj\Debug\FileEncryptDecrypt.exe
 D:\Edward\FileEncryptDecrypt\FileEncryptDecrypt\obj\Debug\FileEncryptDecrypt.pdb
+Z:\Users\Edward\EdwardCode\FileEncryptDecrypt\FileEncryptDecrypt\obj\Debug\FileEncryptDecrypt.exe
+Z:\Users\Edward\EdwardCode\FileEncryptDecrypt\FileEncryptDecrypt\obj\Debug\FileEncryptDecrypt.pdb
+Z:\Users\Edward\EdwardCode\FileEncryptDecrypt\FileEncryptDecrypt\bin\Debug\FileEncryptDecrypt.exe
+Z:\Users\Edward\EdwardCode\FileEncryptDecrypt\FileEncryptDecrypt\bin\Debug\FileEncryptDecrypt.pdb
+Z:\Users\Edward\EdwardCode\FileEncryptDecrypt\FileEncryptDecrypt\obj\Debug\FileEncryptDecrypt.Form1.resources
+Z:\Users\Edward\EdwardCode\FileEncryptDecrypt\FileEncryptDecrypt\obj\Debug\FileEncryptDecrypt.Properties.Resources.resources
+Z:\Users\Edward\EdwardCode\FileEncryptDecrypt\FileEncryptDecrypt\obj\Debug\FileEncryptDecrypt.csproj.GenerateResource.Cache
